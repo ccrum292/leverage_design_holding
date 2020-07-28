@@ -1,3 +1,3 @@
 # Leverage Design Holding Web Page
 
-Deployed: leveragedesignholding-erzejnwzx.vercel.app
+Deployed: https://leveragedesignholding-git-master.ccrum292.vercel.app/
