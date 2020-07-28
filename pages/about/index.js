@@ -1,7 +1,7 @@
-import Nav from '../components/Nav'
+import Nav from '../../components/Nav'
 import Head from 'next/head'
-import TopNavForLgScreens from '../components/TopNavForLgScreens'
-import LgTitle from '../components/LgTitle'
+import TopNavForLgScreens from '../../components/TopNavForLgScreens'
+import LgTitle from '../../components/LgTitle'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
@@ -15,16 +15,16 @@ export default function IndexPage() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
           name="description"
-          content="Home page for Leverage Design Holding"
+          content="About page for Leverage Design Holding"
         />
-        <title>Home - Leverage Design Holding</title>
+        <title>About - Leverage Design Holding</title>
       </Head>
       <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
       <LgTitle/>
       <div className="lg:flex">
         {navOpen ? null:
         <div className="hidden lg:flex justify-center w-full">
-          <TopNavForLgScreens active="Home"/>
+          <TopNavForLgScreens active="About"/>
         </div>}
       </div>
     </div>
