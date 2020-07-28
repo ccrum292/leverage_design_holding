@@ -2,6 +2,7 @@ import Nav from '../components/Nav'
 import Head from 'next/head'
 import TopNavForLgScreens from '../components/TopNavForLgScreens'
 import LgTitle from '../components/LgTitle'
+import Footer from '../components/Footer'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
@@ -10,7 +11,7 @@ export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900 pb-4">
+    <div className="bg-gray-900 pb-4 h-screen">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
@@ -27,6 +28,7 @@ export default function IndexPage() {
           <TopNavForLgScreens active="Home"/>
         </div>}
       </div>
+      <Footer/>
     </div>
   )
 }

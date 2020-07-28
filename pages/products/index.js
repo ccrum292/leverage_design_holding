@@ -5,12 +5,13 @@ import LgTitle from '../../components/LgTitle'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
+import Footer from '../../components/Footer'
 
 export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900 pb-4">
+    <div className="bg-gray-900 pb-4 h-screen">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
@@ -27,6 +28,7 @@ export default function IndexPage() {
           <TopNavForLgScreens active="Products"/>
         </div>}
       </div>
+      <Footer/>
     </div>
   )
 }

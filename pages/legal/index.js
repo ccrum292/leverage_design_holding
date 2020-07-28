@@ -16,16 +16,16 @@ export default function IndexPage() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
           name="description"
-          content="About page for Leverage Design Holding"
+          content="Legal page for Leverage Design Holding"
         />
-        <title>About - Leverage Design Holding</title>
+        <title>Legal - Leverage Design Holding</title>
       </Head>
       <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
       <LgTitle/>
       <div className="lg:flex">
         {navOpen ? null:
         <div className="hidden lg:flex justify-center w-full">
-          <TopNavForLgScreens active="About"/>
+          <TopNavForLgScreens active="Legal"/>
         </div>}
       </div>
       <Footer/>
