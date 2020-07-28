@@ -26,7 +26,7 @@ export default function Nav(props) {
         
       </div>
       {props.navOpen ?
-        <div className="flex flex-col bg-gray-700 rounded-b-full pt-1 pb-12 sm:rounded-b-lg sm:py-2 lg:hidden">
+        <div className="flex flex-col bg-gray-700 pt-1 pb-2 sm:rounded-b-lg sm:py-2 lg:hidden">
           <NavItem href="/" id={1} text="Home" classNameTailwind="px-16 mt-2 mb-2"/>
           <NavItem href="/" id={2} text="Products" classNameTailwind="px-16 mt-2 mb-2"/>
           <NavItem href="/" id={3} text="About" classNameTailwind="px-16 mt-2 mb-2"/>

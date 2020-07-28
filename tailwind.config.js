@@ -13,6 +13,9 @@ module.exports = {
       }
     },
   },
-  variants: {},
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    fontWeight: ['responsive', 'hover', 'focus', 'group-hover']
+  },
   plugins: [],
 }
