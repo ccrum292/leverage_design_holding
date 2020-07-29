@@ -4,6 +4,7 @@ import TopNavForLgScreens from '../components/TopNavForLgScreens'
 import LgTitle from '../components/LgTitle'
 import Footer from '../components/Footer'
 import JumbotronIntro from '../components/JumbotronIntro'
+import SpotlightCard from '../components/SpotlightCard'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
@@ -31,7 +32,8 @@ export default function IndexPage() {
       </div>
       <div className="lg:w-8/12 lg:mx-auto">
         <JumbotronIntro/>
-        <h2 className="jost text-xl font-bold text-black sm:text-4xl text-right mt-4 border-b-2 border-black">Product Spotlight</h2>
+        <h2 className="jost text-xl font-bold text-black sm:text-4xl text-right mx-2 mt-4 border-b-2 border-black">Product Spotlight</h2>
+        <SpotlightCard img={[{src:"/417.jpg", alt: "417"},{src:"/coolCat.jpg", alt: "coolCat"},{src:"/1543982.jpg", alt: "1543982"}]} />
       </div>
       <Footer/>
     </div>

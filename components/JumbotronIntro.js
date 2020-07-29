@@ -1,6 +1,6 @@
 export default function JumbotronIntro() {
   return(
-      <div className="relative">
+      <div className="relative shadowClass">
         <img alt="archimedes lever" src="/archimedes-lever.jpg" className=""/>
         <div className="absolute bottom-0 flex flex-col bg-black bg-opacity-75 z-50">
           <h2 className="text-white text-lg md:text-4xl text-left italic mx-4">We are Leverage Design Holding.</h2>
