@@ -20,13 +20,13 @@ export default function Nav(props) {
             <a className="jost self-center text-2xl font-black text-black sm:text-3xl">Leverage Design Holding</a>
           </Link>
         </div>
-        <div className="p-2 m-2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-125" onClick={() => { props.setNavOpen(!props.navOpen) }}>
+        <div className="p-2 m-2" onClick={() => { props.setNavOpen(!props.navOpen) }}>
           <FontAwesomeIcon style={{ color: "#2d3748" }} size="2x" icon={faBars} />
         </div>
         
       </div>
       {props.navOpen ?
-        <div className="flex flex-col bg-gray-700 pt-1 pb-2 sm:rounded-b-lg sm:py-2 lg:hidden">
+        <div className="flex flex-col pt-1 pb-2 sm:rounded-b-lg sm:py-2 lg:hidden">
           <NavItem href="/" id={1} text="Home" classNameTailwind="px-16 mt-2 mb-2"/>
           <NavItem href="/products" id={2} text="Products" classNameTailwind="px-16 mt-2 mb-2"/>
           <NavItem href="/about" id={3} text="About" classNameTailwind="px-16 mt-2 mb-2"/>

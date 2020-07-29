@@ -23,13 +23,16 @@ export default function IndexPage() {
       </Head>
       <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
       <LgTitle/>
-      <div className="lg:flex mb-4">
+      <div className="lg:flex mb-4 border-b-2 border-black">
         {navOpen ? null:
         <div className="hidden lg:flex justify-center w-full">
           <TopNavForLgScreens active="Home"/>
         </div>}
       </div>
-      <JumbotronIntro/>
+      <div className="lg:w-8/12 lg:mx-auto">
+        <JumbotronIntro/>
+        <h2 className="jost text-xl font-bold text-black sm:text-4xl text-right mt-4 border-b-2 border-black">Product Spotlight</h2>
+      </div>
       <Footer/>
     </div>
   )
