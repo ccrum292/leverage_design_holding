@@ -48,6 +48,10 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.534), 0 3px 10px 0 rgba(0, 0, 0, 0.534);
 }
 
+.backgroundImg {
+  background-image: url("/417.jpg");
+  @apply bg-cover bg-center
+}
 
 @media screen and (min-width: 640px){
   .x-scrollbar:hover{

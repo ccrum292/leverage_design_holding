@@ -14,14 +14,14 @@ export default function Nav(props) {
 
   return (
     <>
-      <div className="flex items-center justify-between bg-gray-800 lg:hidden">
+      <div className="flex items-center justify-between lg:hidden">
         <div className="px-2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-110">
           <Link href="/">
-            <a className="jost self-center text-xl font-bold text-gray-300 sm:text-3xl">Leverage Design Holding</a>
+            <a className="jost self-center text-2xl font-black text-black sm:text-3xl">Leverage Design Holding</a>
           </Link>
         </div>
         <div className="p-2 m-2 cursor-pointer transition duration-300 ease-in-out transform hover:scale-125" onClick={() => { props.setNavOpen(!props.navOpen) }}>
-          <FontAwesomeIcon style={{ color: "#e2e8f0" }} size="2x" icon={faBars} />
+          <FontAwesomeIcon style={{ color: "#2d3748" }} size="2x" icon={faBars} />
         </div>
         
       </div>

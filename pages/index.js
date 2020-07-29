@@ -3,6 +3,7 @@ import Head from 'next/head'
 import TopNavForLgScreens from '../components/TopNavForLgScreens'
 import LgTitle from '../components/LgTitle'
 import Footer from '../components/Footer'
+import JumbotronIntro from '../components/JumbotronIntro'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
@@ -11,7 +12,7 @@ export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900 pb-4 h-screen">
+    <div className="backgroundImg pb-4 h-full">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
@@ -22,12 +23,13 @@ export default function IndexPage() {
       </Head>
       <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
       <LgTitle/>
-      <div className="lg:flex">
+      <div className="lg:flex mb-4">
         {navOpen ? null:
         <div className="hidden lg:flex justify-center w-full">
           <TopNavForLgScreens active="Home"/>
         </div>}
       </div>
+      <JumbotronIntro/>
       <Footer/>
     </div>
   )
