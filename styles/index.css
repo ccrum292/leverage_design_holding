@@ -49,7 +49,7 @@
 }
 
 .backgroundImg {
-  background-image: url("/417-progressive-min.jpeg");
+  background-image: url("/417-progressive-min.png");
   @apply bg-cover bg-center
 }
 
