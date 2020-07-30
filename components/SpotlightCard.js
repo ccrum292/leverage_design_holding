@@ -1,4 +1,8 @@
 import { useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
+
 
 export default function SpotlightCard(props){
   const numberOfImages = props.img.length
@@ -26,12 +30,14 @@ export default function SpotlightCard(props){
   };
 
   return(
-    <div className="cursor-pointer shadowClass flex flex-col justify-center bg-gray-800 overflow-hidden rounded-lg m-2 sm:w-80 w-100 transition duration-700 ease-in-out transform  hover:scale-105">
-      <img onClick={e =>{
-        e.preventDefault()
-        console.log("right")
-        handleImgChangeRight()
-      }} className="object-cover h-75 sm:h-60" src={imgObj.src} alt={imgObj.alt}/>
+    <div className="cursor-pointer shadowClass flex flex-col justify-center bg-white overflow-hidden m-2 sm:w-80 w-100 transition duration-700 ease-in-out transform  hover:scale-105">
+      <div className="relative">
+        <img className=" object-cover h-75 sm:h-60 z-0" src={imgObj.src} alt={imgObj.alt}/>
+        <div className="absolute bottom-0 my-auto w-full flex justify-between">
+          <FontAwesomeIcon className="opacity-75 sm:hover:opacity-100" style={{ color: "#c53030" }} size="2x" icon={faArrowUp} />
+          <FontAwesomeIcon className="opacity-75  sm:hover:opacity-100" style={{ color: "#c53030" }} size="2x" icon={faArrowUp} />
+        </div>
+      </div>
       <div className="flex flex-col">
         <h3 className="jost text-gray-300 m-2 text-xl font-bold overflow-x-hidden truncate">{props.title}</h3>
         <div className="flex flex-row justify-between items-center">
@@ -41,3 +47,9 @@ export default function SpotlightCard(props){
     </div>
   )
 }
+
+// onClick={e =>{
+//   e.preventDefault()
+//   console.log("right")
+//   handleImgChangeRight()
+// }}
