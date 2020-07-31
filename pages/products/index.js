@@ -11,7 +11,7 @@ export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900 pb-4 h-screen">
+    <div className="flex flex-col backgroundImg pb-4 min-h-screen">
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <meta
@@ -20,14 +20,19 @@ export default function IndexPage() {
         />
         <title>Products - Leverage Design Holding</title>
       </Head>
-      <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
-      <LgTitle/>
-      <div className="lg:flex">
-        {navOpen ? null:
-        <div className="hidden lg:flex justify-center w-full">
-          <TopNavForLgScreens active="Products"/>
-        </div>}
-      </div>
+      <header>
+        <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <LgTitle/>
+        <div className="lg:flex mb-4 border-b-2 border-black">
+          {navOpen ? null:
+          <div className="hidden lg:flex justify-center w-full">
+            <TopNavForLgScreens active="Products"/>
+          </div>}
+        </div>
+      </header>
+      <main className="flex-grow">
+
+      </main>
       <Footer/>
     </div>
   )

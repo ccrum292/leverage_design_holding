@@ -7,7 +7,5 @@ export default function JumbotronIntro() {
           <h2 className="text-white italic md:text-3xl mx-4 mb-2">A Company Built to Develope and Leverage Inteligent Design to Move the World.</h2>
         </div>
       </div>
-      
-    
   )
 }

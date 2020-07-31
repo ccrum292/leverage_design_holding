@@ -29,3 +29,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+*.mp4
+Introducing_Stiff_Arms.*
+Stiff_Arms_for_Multi-Position_Ladders.*

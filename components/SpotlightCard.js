@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import ButtonOne from "./ButtonOne"
 import Link from 'next/link'
 
 
@@ -10,46 +12,56 @@ export default function SpotlightCard(props){
   const [imgObj, setImgObj] = useState(props.img[0]);
   
   const handleImgChangeRight = () => {
+    console.log(`first imgIndex ${imgIndex}`)
     if(imgIndex < (numberOfImages-1)){
       setImgIndex(imgIndex + 1);
+      setImgObj(props.img[imgIndex +1]);
     } else{
       setImgIndex(0);
+      setImgObj(props.img[0]);
     }
-
-    setImgObj(props.img[imgIndex]);
   };
 
   const handleImgChangeLeft = () => {
+    console.log(`first imgIndex ${imgIndex}`)
+
     if(imgIndex > 0) {
       setImgIndex(imgIndex - 1);
+      setImgObj(props.img[imgIndex-1]);
+
     } else{
       setImgIndex(numberOfImages-1);
-    }
+      setImgObj(props.img[numberOfImages-1]);
 
-    setImgObj(props.img[imgIndex]);
+    }
   };
 
   return(
-    <div className="cursor-pointer shadowClass flex flex-col justify-center bg-white overflow-hidden m-2 sm:w-80 w-100 transition duration-700 ease-in-out transform  hover:scale-105">
-      <div className="relative">
-        <img className=" object-cover h-75 sm:h-60 z-0" src={imgObj.src} alt={imgObj.alt}/>
-        <div className="absolute bottom-0 my-auto w-full flex justify-between">
-          <FontAwesomeIcon className="opacity-75 sm:hover:opacity-100" style={{ color: "#c53030" }} size="2x" icon={faArrowUp} />
-          <FontAwesomeIcon className="opacity-75  sm:hover:opacity-100" style={{ color: "#c53030" }} size="2x" icon={faArrowUp} />
+    <div className="shadowClass flex flex-col justify-center bg-yellow-300 overflow-hidden m-4 lg:w-1/2">
+      <div className="relative w-full">
+        <img className="object-cover w-full h-60 sm:h-120 lg:h-75 z-0" src={imgObj.src} alt={imgObj.alt}/>
+        <div className="absolute bottom-0 my-auto w-full h-full flex items-center  justify-between">
+          <FontAwesomeIcon onClick={e =>{
+            e.preventDefault()
+            console.log("left")
+            handleImgChangeLeft()
+          }} className="cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
+          <FontAwesomeIcon onClick={e =>{
+            e.preventDefault()
+            console.log("right")
+            handleImgChangeRight()
+          }} className="cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
         </div>
       </div>
-      <div className="flex flex-col">
-        <h3 className="jost text-gray-300 m-2 text-xl font-bold overflow-x-hidden truncate">{props.title}</h3>
-        <div className="flex flex-row justify-between items-center">
-          <h4 className="jost text-gray-300 m-2 self-end text-xl font-bold overflow-x-hidden truncate w-1/3">${props.price}</h4>
-        </div>
+      <div className="flex flex-col mb-2">
+        <h3 className="jost mx-2 mt-4 text-xl font-bold">{props.title}</h3>
+        <p className="jost mx-2 mb-2">{props.text}</p>
+        <ButtonOne route="/products" text="Show Me More"/>
       </div>
+      <video controls>
+        <source src={props.videoSrc} type="video/mp4"></source>
+      </video>
     </div>
   )
 }
 
-// onClick={e =>{
-//   e.preventDefault()
-//   console.log("right")
-//   handleImgChangeRight()
-// }}

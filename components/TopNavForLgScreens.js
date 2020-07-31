@@ -33,7 +33,7 @@ export default function TopNavForLgScreens(props) {
   };
 
   return (
-    <div className="hidden lg:flex flex-row w-8/12 items-center justify-around">
+    <div className="hidden sticky top-0 lg:flex flex-row w-8/12 items-center justify-around">
       {checkForActive(props, navInfoArray)}
     </div>
   )
