@@ -49,8 +49,9 @@
 }
 
 .backgroundImg {
-  background-image: url("/417-progressive-min.jpeg");
-  @apply bg-cover bg-center bg-fixed
+  background-image: url("/brickwall_@2X.png");
+  /* @apply bg-cover bg-center bg-fixed */
+  @apply bg-repeat
 }
 
 ::-webkit-scrollbar-thumb:hover {
