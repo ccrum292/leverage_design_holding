@@ -63,9 +63,7 @@ export default function SpotlightCard(props){
         <p className="jost mx-2 mb-2">{props.text}</p>
         <ButtonOne route="/products" text="Show Me More"/>
       </div>
-      <video controls>
-        <source src={props.videoSrc} type="video/mp4"></source>
-      </video>
+      <iframe height="315" src={props.videoSrc} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
       {expandedImgDiv ? 
       <div className="fixed top-0 left-0 min-h-screen min-w-full z-50 bg-gray-800 bg-opacity-90 flex justify-center items-center">
         <img className="object-contain w-full h-screen z-0" src={imgObj.src} alt={imgObj.alt}/>
