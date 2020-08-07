@@ -38,7 +38,7 @@ export default function IndexPage() {
                   Contact Information
                 </h3>
                 <p className="jost m-4">
-                  Please feel free to contact Member/Manager Dan Crum with the Information provided below.
+                  Please feel free to contact Member/Manager Dan Crum with the following Information.
                 </p>
                 <h4 className="jost mx-4 text-xl font-bold border-b border-black my-1">Dan Crum, <span className="text-lg">Member/Manager</span></h4>
                 {/* <h5 className="jost mx-4 text-lg font-bold my-1">Huntersville, NC 28078</h5> */}

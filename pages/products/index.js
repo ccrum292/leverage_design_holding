@@ -2,6 +2,7 @@ import Nav from '../../components/Nav'
 import Head from 'next/head'
 import TopNavForLgScreens from '../../components/TopNavForLgScreens'
 import LgTitle from '../../components/LgTitle'
+import BigProductCard from '../../components/BigProductCard'
 
 import { useState } from 'react'
 import { motion } from "framer-motion"
@@ -30,8 +31,8 @@ export default function IndexPage() {
           </div>}
         </div>
       </header>
-      <main className="flex-grow">
-
+      <main className="flex-grow lg:w-8/12 lg:mx-auto">
+        <BigProductCard title="Stiff Arms for Multi Position Ladders" videoSrc="https://www.youtube.com/embed/mh4h15GpAH0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac auctor odio. Etiam convallis lacus id sapien suscipit, ut posuere tellus gravida. Cras facilisis feugiat ligula a tempor. Curabitur ultricies ultrices malesuada. Ut at dui quis magna pulvinar luctus ut in diam. Nam pulvinar metus malesuada odio pellentesque efficitur. Nulla ut purus nec risus pretium sollicitudin. Morbi urna ipsum, hendrerit ac urna vel, vulputate aliquam est. Proin et purus ut odio varius imperdiet."/>
       </main>
       <Footer/>
     </div>
