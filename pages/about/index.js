@@ -32,7 +32,7 @@ export default function IndexPage() {
       </header>
       <main className="flex-grow">
         <div className="lg:w-8/12 lg:mx-auto">
-          <div className="shadowClass grid grid-col-1 sm:grid-cols-2 mx-2">
+          <div className="shadowClass grid grid-col-1 sm:grid-cols-2 mx-2 bg-yellow-300">
             <img className="" src="/_MG_0403-min.jpg" alt="Dan Crum Standing Next to Stiff Arms"/>
             <div className="bg-yellow-300">
               <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black">
