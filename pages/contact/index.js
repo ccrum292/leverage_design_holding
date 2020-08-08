@@ -9,6 +9,10 @@ import { motion } from "framer-motion"
 
 export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
+  
+  const copyEmail = () => {
+    navigator.clipboard.writeText("dcrum@leveragedesignholding.com")
+  }
 
   return (
     <div className="flex flex-col backgroundImg pb-4 min-h-screen">
@@ -31,7 +35,7 @@ export default function IndexPage() {
         </div>
       </header>
       <main className="flex-grow">
-        <div className="lg:w-8/12 lg:mx-auto">
+        <div className="lg:w-1/3 lg:mx-auto">
             <div className="shadowClass grid grid-col-1 mx-2">
               <div className="bg-yellow-300">
                 <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black">
@@ -44,7 +48,10 @@ export default function IndexPage() {
                 {/* <h5 className="jost mx-4 text-lg font-bold my-1">Huntersville, NC 28078</h5> */}
                 <h5 className="jost mx-4 text-lg font-bold my-1">(704) 997-6028 Office</h5>
                 <h5 className="jost mx-4 text-lg font-bold my-1">(980) 829-9998 Mobile</h5>
-                <h5 className="jost mx-4 text-lg font-bold mt-1 mb-4">dcrum@leveragedesignholding.com</h5>
+                <div className="flex flex-wrap">
+                  <h5 className="jost mx-4 text-lg font-bold mb-2">dcrum@leveragedesignholding.com</h5>
+                  <button onClick={() => copyEmail()} className="text-center text-sm text-white bg-gray-700 shadowClass mx-4 sm:mx-0 mb-4 cursor-pointer p-1 self-center transition duration-700 ease-in-out transform hover:text-black hover:font-black hover:bg-gray-500 hover:scale-105">copy to clipboard</button>
+                </div>
               </div>
             </div>
           </div>
