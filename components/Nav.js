@@ -1,16 +1,9 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
-import SearchDiv from "./SearchDiv"
 import NavItem from "./NavItem"
 
-import { motion } from "framer-motion";
-
 export default function Nav(props) {
-  const [searchDivOpen, setSearchDivOpen] = useState(false)
 
   return (
     <>
