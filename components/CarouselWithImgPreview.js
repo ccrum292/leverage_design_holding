@@ -39,7 +39,7 @@ export default function CarouselWithImgPreview(props) {
 
 
   return(
-    <div className="relative w-full">
+    <div className="relative w-full shadowClass">
       <img className="object-cover w-full h-60 sm:h-120 lg:h-75 z-0" src={imgObj.src} alt={imgObj.alt}/>
       <div className="absolute bottom-0 my-auto w-full h-full flex items-center  justify-between">
         <FontAwesomeIcon onClick={e =>{
