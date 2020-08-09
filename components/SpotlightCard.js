@@ -5,7 +5,6 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faExpandAlt } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import ButtonOne from "./ButtonOne"
-import Link from 'next/link'
 
 
 export default function SpotlightCard(props){

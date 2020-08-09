@@ -5,7 +5,6 @@ import LgTitle from '../../components/LgTitle'
 import Footer from '../../components/Footer'
 
 import { useState } from 'react'
-import { motion } from "framer-motion"
 
 export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)

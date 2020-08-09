@@ -7,7 +7,6 @@ import objectWithStoredImgArrays from '../../lib/js/objectWithStoredImgArrays';
 
 
 import { useState } from 'react'
-import { motion } from "framer-motion"
 import Footer from '../../components/Footer'
 
 export default function IndexPage() {

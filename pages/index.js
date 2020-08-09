@@ -8,7 +8,6 @@ import SpotlightCard from '../components/SpotlightCard'
 import objectWithStoredImgArrays from '../lib/js/objectWithStoredImgArrays'
 
 import { useState } from 'react'
-import { motion } from "framer-motion"
 
 export default function IndexPage() {
   const [navOpen, setNavOpen] = useState(false)
