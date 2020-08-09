@@ -36,7 +36,7 @@ export default function IndexPage() {
             <img className="" src="/_MG_0403-min.jpg" alt="Dan Crum Standing Next to Stiff Arms"/>
             <div className="bg-yellow-300">
               <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black">
-                Get to Know Leverage Design Holding
+                Get to Know Leverage Design Holding<span className="text-sm"></span>
               </h3>
               <p className="jost m-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim varius massa, id ornare leo maximus sed. Vestibulum vitae tellus ipsum. Nulla pulvinar nibh vel magna volutpat sollicitudin. Donec congue accumsan vestibulum. In dignissim, magna sed molestie luctus, nulla elit pharetra mauris, vel vehicula libero elit vitae tortor. Praesent faucibus enim ac neque feugiat, id semper nulla fringilla. Nulla et dignissim risus. Fusce non tristique ligula. Donec facilisis massa eu tellus tempor consequat dapibus quis tellus. Aliquam commodo, dui sit amet egestas mollis, sem est egestas nisi, id imperdiet nibh leo in justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. 
