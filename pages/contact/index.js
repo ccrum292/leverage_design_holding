@@ -49,7 +49,7 @@ export default function IndexPage() {
                 <h5 className="jost mx-4 text-lg font-bold my-1">(980) 829-9998 Mobile</h5>
                 <div className="flex flex-wrap">
                   <h5 className="jost mx-4 text-lg font-bold mb-2">dcrum@leveragedesignholding.com</h5>
-                  <button onClick={() => copyEmail()} className="text-center text-sm text-white bg-gray-700 shadowClass mx-4 sm:mx-0 mb-4 cursor-pointer p-1 self-center transition duration-700 ease-in-out transform duration-700 hover:text-black hover:font-black hover:bg-gray-500 hover:scale-105">copy to clipboard</button>
+                  <button onClick={() => copyEmail()} className="text-center text-sm text-white bg-gray-700 shadowClass mx-4 mb-4 cursor-pointer p-1 self-center transition duration-700 ease-in-out transform duration-700 hover:text-black hover:font-black hover:bg-gray-500 hover:scale-105">copy to clipboard</button>
                 </div>
               </div>
             </div>
