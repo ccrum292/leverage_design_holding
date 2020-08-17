@@ -34,10 +34,10 @@ export default function IndexPage() {
           <div className="shadowClass grid grid-col-1 sm:grid-cols-2 mx-2 bg-yellow-300">
             <img className="" src="/_MG_0403-min.jpg" alt="Dan Crum Standing Next to Stiff Arms"/>
             <div className="bg-yellow-300">
-              <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black">
+              <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black xl:text-2xl 2xl:text-3xl">
                 Get to Know Leverage Design Holding<span className="text-sm"></span>
               </h3>
-              <p className="jost m-4">
+              <p className="jost text-xl xl:text-2xl m-4">
               Leverage Design Holding, LLC (LDH) is a product development and intellectual property holding company.  We specialize in recognizing needs in the market and translating those needs into new product offerings.  LDH performs the engineering design, prototyping, and testing functions to complete drawing and specification packages, ready for interested parties to take to production. We look to partner with manufacturers to bring new ideas and solutions to the world, with the goal of making a positive impact on society.  
               </p>
             </div>
