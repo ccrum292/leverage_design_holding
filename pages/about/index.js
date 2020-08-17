@@ -38,7 +38,7 @@ export default function IndexPage() {
                 Get to Know Leverage Design Holding<span className="text-sm"></span>
               </h3>
               <p className="jost m-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim varius massa, id ornare leo maximus sed. Vestibulum vitae tellus ipsum. Nulla pulvinar nibh vel magna volutpat sollicitudin. Donec congue accumsan vestibulum. In dignissim, magna sed molestie luctus, nulla elit pharetra mauris, vel vehicula libero elit vitae tortor. Praesent faucibus enim ac neque feugiat, id semper nulla fringilla. Nulla et dignissim risus. Fusce non tristique ligula. Donec facilisis massa eu tellus tempor consequat dapibus quis tellus. Aliquam commodo, dui sit amet egestas mollis, sem est egestas nisi, id imperdiet nibh leo in justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. 
+              Leverage Design Holding, LLC (LDH) is a product development and intellectual property holding company.  We specialize in recognizing needs in the market and translating those needs into new product offerings.  LDH performs the engineering design, prototyping, and testing functions to complete drawing and specification packages, ready for interested parties to take to production. We look to partner with manufacturers to bring new ideas and solutions to the world, with the goal of making a positive impact on society.  
               </p>
             </div>
           </div>
