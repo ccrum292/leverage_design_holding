@@ -18,33 +18,48 @@ export default function IndexPage() {
           content="About page for Leverage Design Holding"
         />
         <title>About - Leverage Design Holding</title>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-175641724-1"
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-175641724-1');
+        `,
+          }}
+        />
       </Head>
       <header>
         <Nav navOpen={navOpen} setNavOpen={setNavOpen} />
-        <LgTitle/>
+        <LgTitle />
         <div className="lg:flex mb-4 border-b-2 border-black">
-          {navOpen ? null:
-          <div className="hidden lg:flex justify-center w-full">
-            <TopNavForLgScreens active="About"/>
-          </div>}
+          {navOpen ? null :
+            <div className="hidden lg:flex justify-center w-full">
+              <TopNavForLgScreens active="About" />
+            </div>}
         </div>
       </header>
       <main className="flex-grow">
         <div className="lg:w-8/12 lg:mx-auto">
           <div className="shadowClass grid grid-col-1 sm:grid-cols-2 mx-2 bg-yellow-300">
-            <img className="" src="/_MG_0403-min.jpg" alt="Dan Crum Standing Next to Stiff Arms"/>
+            <img className="" src="/_MG_0403-min.jpg" alt="Dan Crum Standing Next to Stiff Arms" />
             <div className="bg-yellow-300">
               <h3 className="jost mx-2 mt-4 text-xl font-bold border-b-2 border-black xl:text-2xl 2xl:text-3xl">
                 Get to Know Leverage Design Holding<span className="text-sm"></span>
               </h3>
               <p className="jost text-xl xl:text-2xl m-4">
-              Leverage Design Holding, LLC (LDH) is a product development and intellectual property holding company.  We specialize in recognizing needs in the market and translating those needs into new product offerings.  LDH performs the engineering design, prototyping, and testing functions to complete drawing and specification packages, ready for interested parties to take to production. We look to partner with manufacturers to bring new ideas and solutions to the world, with the goal of making a positive impact on society.  
+                Leverage Design Holding, LLC (LDH) is a product development and intellectual property holding company.  We specialize in recognizing needs in the market and translating those needs into new product offerings.  LDH performs the engineering design, prototyping, and testing functions to complete drawing and specification packages, ready for interested parties to take to production. We look to partner with manufacturers to bring new ideas and solutions to the world, with the goal of making a positive impact on society.
               </p>
             </div>
           </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
