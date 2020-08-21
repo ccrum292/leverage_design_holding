@@ -45,15 +45,15 @@ export default function CarouselWithImgPreview(props) {
         <FontAwesomeIcon onClick={e =>{
           e.preventDefault()
           handleImgChangeLeft()
-        }} className="cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
+        }} className="no-select cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
         <FontAwesomeIcon onClick={e =>{
           e.preventDefault()
           handleImgChangeRight()
-        }} className="cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
+        }} className="no-select cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
         <FontAwesomeIcon onClick={e =>{
           e.preventDefault()
           setExpandedImgDiv(()=>!expandedImgDiv)
-        }} className="absolute bottom-0 right-0 cursor-pointer m-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faExpandAlt} />
+        }} className="no-select absolute bottom-0 right-0 cursor-pointer m-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faExpandAlt} />
       </div>
       {expandedImgDiv ? 
       <div className="fixed top-0 left-0 min-h-screen min-w-full z-50 bg-gray-800 bg-opacity-90 flex justify-center items-center">
@@ -62,15 +62,15 @@ export default function CarouselWithImgPreview(props) {
           <FontAwesomeIcon onClick={e =>{
             e.preventDefault()
             handleImgChangeLeft()
-          }} className="cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
+          }} className="no-select cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
           <FontAwesomeIcon onClick={e =>{
             e.preventDefault()
             handleImgChangeRight()
-          }} className="cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
+          }} className="no-select cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
           <FontAwesomeIcon onClick={e =>{
             e.preventDefault()
             setExpandedImgDiv(()=>!expandedImgDiv)
-          }} className="absolute top-0 right-0 cursor-pointer mr-4 mt-2 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faTimes} />
+          }} className="no-select absolute top-0 right-0 cursor-pointer mr-4 mt-2 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faTimes} />
         </div>
       </div>: null
       }
