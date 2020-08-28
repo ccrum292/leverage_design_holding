@@ -37,27 +37,15 @@ export default function CarouselWithImgPreview(props) {
     }
   };
 
+  const handleImgHover = (indexValue) => {
+    setImgIndex(indexValue);
+    setImgObj(props.img[indexValue]);
+  }
 
   return(
-    <div className="relative w-full shadowClass">
-      <img className="object-cover w-full h-60 sm:h-120 lg:h-75 z-0" src={imgObj.src} alt={imgObj.alt}/>
-      <div className="absolute bottom-0 my-auto w-full h-full flex items-center  justify-between">
-        <FontAwesomeIcon onClick={e =>{
-          e.preventDefault()
-          handleImgChangeLeft()
-        }} className="no-select cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
-        <FontAwesomeIcon onClick={e =>{
-          e.preventDefault()
-          handleImgChangeRight()
-        }} className="no-select cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
-        <FontAwesomeIcon onClick={e =>{
-          e.preventDefault()
-          setExpandedImgDiv(()=>!expandedImgDiv)
-        }} className="no-select absolute bottom-0 right-0 cursor-pointer m-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faExpandAlt} />
-      </div>
-      {expandedImgDiv ? 
-      <div className="fixed top-0 left-0 min-h-screen min-w-full z-50 bg-gray-800 bg-opacity-90 flex justify-center items-center">
-        <img className="object-contain w-full h-screen z-0" src={imgObj.src} alt={imgObj.alt}/>
+    <div className="my-4">
+      <div className="relative w-full shadowClass">
+        <img className="object-cover w-full h-60 sm:h-120 lg:h-75 z-0" src={imgObj.src} alt={imgObj.alt}/>
         <div className="absolute bottom-0 my-auto w-full h-full flex items-center  justify-between">
           <FontAwesomeIcon onClick={e =>{
             e.preventDefault()
@@ -70,11 +58,35 @@ export default function CarouselWithImgPreview(props) {
           <FontAwesomeIcon onClick={e =>{
             e.preventDefault()
             setExpandedImgDiv(()=>!expandedImgDiv)
-          }} className="no-select absolute top-0 right-0 cursor-pointer mr-4 mt-2 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faTimes} />
+          }} className="no-select absolute bottom-0 right-0 cursor-pointer m-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faExpandAlt} />
         </div>
-      </div>: null
-      }
+        {expandedImgDiv ? 
+        <div className="fixed top-0 left-0 min-h-screen min-w-full z-50 bg-gray-800 bg-opacity-90 flex justify-center items-center">
+          <img className="object-contain w-full h-screen z-0" src={imgObj.src} alt={imgObj.alt}/>
+          <div className="absolute bottom-0 my-auto w-full h-full flex items-center  justify-between">
+            <FontAwesomeIcon onClick={e =>{
+              e.preventDefault()
+              handleImgChangeLeft()
+            }} className="no-select cursor-pointer ml-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronLeft} />
+            <FontAwesomeIcon onClick={e =>{
+              e.preventDefault()
+              handleImgChangeRight()
+            }} className="no-select cursor-pointer mr-1 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faChevronRight} />
+            <FontAwesomeIcon onClick={e =>{
+              e.preventDefault()
+              setExpandedImgDiv(()=>!expandedImgDiv)
+            }} className="no-select absolute top-0 right-0 cursor-pointer mr-4 mt-2 opacity-75 transition duration-700 ease-in-out transform sm:hover:opacity-100 sm:hover:scale-110" style={{ color: "#ecc94b" }} size="2x" icon={faTimes} />
+          </div>
+        </div>: null
+        }
 
+      </div>
+      <div className="hidden lg:flex flex-wrap justify-around mt-2 z-0">
+        {props.img.map((val, i) => {
+          return <img onMouseOver={() => handleImgHover(i)} className="object-cover h-16 cursor-pointer shadowClass m-1" value={i} src={val.src} alt={val.alt}/>
+
+        })}
+      </div>
     </div>
   )
 }
